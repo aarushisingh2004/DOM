@@ -1,0 +1,63 @@
+/* Style.css */
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f3f3f3;
+}
+
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    position: relative;
+    overflow: hidden;
+}
+
+#main-heading {
+    text-align: center;
+    color: #333;
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.list-items {
+    list-style: none;
+    padding: 12px 20px;
+    border-bottom: 1px solid #ccc;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+}
+
+.list-items:hover {
+    background-color: #f9f9f9;
+}
+
+.list-items:last-child {
+    border-bottom: none;
+}
+
+/* Add a gradient background */
+.container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, #FF6B6B, #FFE66D);
+    z-index: -1;
+    border-radius: 10px;
+    opacity: 0.8;
+}
+
+/* Styles for responsiveness */
+@media screen and (max-width: 600px) {
+    .container {
+        padding: 10px;
+    }
+}
